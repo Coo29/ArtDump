@@ -151,7 +151,7 @@ label {
     align-items: left;
     justify-content: flex-start;
     position: relative;
-    min-width: 10%;
+    min-width: 100px;
     max-width: 70%;
     padding: 2%;
     background-color: #4e5779;
@@ -252,18 +252,41 @@ label {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2vw;
+    justify-items: center;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    align-content: center;
     padding: 0.1vw;
+    min-height: 100px;
 }
+
+.gallery-joker {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 2vw;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0.1vw;
+    min-height: 50px;
+}
+
+.gallery-joker .image-container img {
+    width: 7vw;
+    height: auto;
+    max-width: 200px;
+    max-height: 200px;
+}
+
 
 .gallery-container {
     display: flex;
     justify-content: center;
-    padding: 10% 5%;
+    align-items: center;
+    padding: 2% 5%;
     min-height: auto;
 }
 
@@ -289,7 +312,7 @@ label {
 }
 
 .image-container img {
-    width: 100%;
+    width: 15vw;
     height: auto;
     display: block;
     object-fit: contain;
@@ -331,6 +354,8 @@ label {
 .lightbox-content {
     max-width: 90%;
     max-height: 90%;
+    width: auto;
+    height: 90%;
 }
 
 .close {
